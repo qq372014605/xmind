@@ -40,14 +40,22 @@ export default {
 		};
 
 		// 页面跳转
-		Vue.prototype.goPage = function(name,query=null) {
+		Vue.prototype.goPage = function (name, query = null) {
 			let routerParams = {
 				'name': name,
 			};
-			if(query){
+			if (query) {
 				routerParams.query = query;
 			}
 			this.$router.push(routerParams);
 		};
+		
+
+		// 二维数组排序
+		Vue.prototype.keysrt = function (key, sort='desc') {
+			return function (a, b) {
+				return sort=='desc' ? ~~(a[key] < b[key]) : ~~(a[key] > b[key]);
+			}
+		}
 	}
 };
