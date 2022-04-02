@@ -295,7 +295,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .data-show{
+.data-show{
   .data-opera{
     display: flex;
     .bill-add{

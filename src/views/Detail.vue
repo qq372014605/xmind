@@ -92,14 +92,10 @@ export default {
             amountShow: amountShow
           });
         }
-        tableData.sort(this.keysrt('amount'));
-        console.log(tableData);
+        tableData.sort(this.keySort('amount'));
       }
       return tableData;
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
