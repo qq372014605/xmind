@@ -54,7 +54,7 @@ export default {
 		// 二维数组排序
 		Vue.prototype.keySort = function (key, sort='desc') {
 			return function (a, b) {
-				return sort=='desc' ? ~~(a[key] < b[key]) : ~~(a[key] > b[key]);
+				return sort=='desc' ? b[key] - a[key] : a[key] - b[key];
 			}
 		}
 	}
